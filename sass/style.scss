@@ -1,0 +1,63 @@
+$navy: #2b2e4a;
+$white: #ffffff;
+$marron: #903749;
+$gray: #222831;
+$font: "Lato";
+
+body {
+  background-color: $gray;
+}
+
+.header {
+  font-family: $font;
+  color: #fff;
+  height: 6em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #fff;
+  width: 90%;
+  margin: 0 auto 1em auto;
+
+  .header__h1 {
+    margin: 0 auto;
+  }
+
+  .aside__img {
+    width: 3em;
+    filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(268deg)
+      brightness(117%) contrast(103%);
+  }
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    
+    .field {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #e9a831;
+      font-family: 'mononoki NF';
+      font-weight: bolder;
+      font-size: 1.3em;
+      width: 3.5em;
+      height: 3.5em;
+      margin: .2em;
+    }
+  }
+}
+
+span {
+  color: rgb(228, 179, 88);
+  font-style: italic;
+}
