@@ -4,6 +4,11 @@ $marron: #903749;
 $gray: #222831;
 $font: "Lato";
 
+@mixin sizeSquares {
+  width: 3em;
+  height:3em;
+}
+
 body {
   background-color: $gray;
 }
@@ -21,13 +26,29 @@ body {
 
   .header__h1 {
     margin: 0 auto;
+    transition: 1s;
+
   }
 
   .aside__img {
+    cursor: pointer;
+    &:active {
+      opacity: 0.9;
+    }
     width: 3em;
     filter: invert(100%) sepia(0%) saturate(7487%) hue-rotate(268deg)
       brightness(117%) contrast(103%);
   }
+}
+
+.aside {
+  background-color: $white;
+  display: none;
+  position: absolute;
+  bottom: .1em;
+  width: 15em;
+  height: 100em;
+  z-index: 1;
 }
 
 .main {
@@ -35,11 +56,12 @@ body {
   flex-direction: column;
   margin: 0 auto;
   width: 90%;
-  height: 100%;
+  height: 80vh;
 
   .container {
     display: flex;
     justify-content: center;
+    flex-wrap: nowrap;
     flex-direction: row;
     
     .field {
@@ -50,9 +72,40 @@ body {
       font-family: 'mononoki NF';
       font-weight: bolder;
       font-size: 1.3em;
-      width: 3.5em;
-      height: 3.5em;
+      @include sizeSquares();
       margin: .2em;
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10em;
+  
+  .button {
+    color: $white;
+    flex-grow: .1;
+    width: 24em;
+    height: 2.5em;
+    font-family: $font;
+    font-size: 1.123em;
+    border-style: none;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  .sort {
+    background: linear-gradient(to right, #005f05, #2dda2d);
+    &:active {
+      opacity: 0.9;
+    }
+  }
+
+  .unsort {
+    background: linear-gradient(to right, #810006, #f12f2f);
+    &:active {
+      opacity: 0.9;
     }
   }
 }

@@ -1,52 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/sass/style.css">
-  <link rel="stylesheet" href="/sass/normalize.css">
-  <script src="./js/main.js" defer></script>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./sass/style.css" />
+  <link rel="stylesheet" href="./sass/normalize.css" />
   <title>MergeSort</title>
 </head>
+
 <body>
   <header class="header">
     <img src="img/dropdown.png" alt="dropdown menu icon" id="drop-down-menu" class="aside__img" />
     <h1 class="header__h1">Merge Sort <span>Visualitation</span></h1>
   </header>
+  <aside class="aside">
+
+  </aside>
   <main class="main">
     <section class="container">
       <div class="field">
-        <p>5</p>
       </div>
       <div class="field">
-        <p>4</p>
       </div>
       <div class="field">
-        <p>7</p>
       </div>
       <div class="field">
-        <p>9</p>
       </div>
       <div class="field">
-        <p>2</p>
       </div>
       <div class="field">
-        <p>8</p>
       </div>
       <div class="field">
-        <p>6</p>
       </div>
       <div class="field">
-        <p>1</p>
       </div>
       <div class="field">
-        <p>2</p>
       </div>
       <div class="field">
-        <p>3</p>
       </div>
     </section>
   </main>
+  <div class="buttons">
+    <button type="button" class="button sort" id="sort">Sort</button>
+    <button type="button" class="button unsort" id="unsort">Unsort</button>
+  </div>
+
+  <!-- Jquery -->
+  <script src="./js/jquery-3.6.1.min.js"></script>
+  <!-- Javascript -->
+  <script src="./js/main.js"></script>
+  <script src="./js/mergeSort.js"></script>
 </body>
+
 </html>
