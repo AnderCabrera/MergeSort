@@ -2,15 +2,15 @@ $navy: #2b2e4a;
 $white: #ffffff;
 $marron: #903749;
 $gray: #222831;
-$font: "Lato";
+$font: 'Lato';
 
 @mixin sizeSquares {
   width: 3em;
-  height:3em;
+  height: 3em;
 }
 
 body {
-  background-color: $gray;
+  background-color: #222222;
 }
 
 .header {
@@ -27,7 +27,6 @@ body {
   .header__h1 {
     margin: 0 auto;
     transition: 1s;
-
   }
 
   .aside__img {
@@ -45,7 +44,7 @@ body {
   background-color: $white;
   display: none;
   position: absolute;
-  bottom: .1em;
+  bottom: 0.1em;
   width: 15em;
   height: 100em;
   z-index: 1;
@@ -58,22 +57,27 @@ body {
   width: 90%;
   height: 80vh;
 
-  .container {
+  section.animation-zone {
     display: flex;
     justify-content: center;
-    flex-wrap: nowrap;
-    flex-direction: row;
     
-    .field {
+    div {
       display: flex;
       justify-content: center;
-      align-items: center;
-      background-color: #e9a831;
-      font-family: 'mononoki NF';
-      font-weight: bolder;
-      font-size: 1.3em;
-      @include sizeSquares();
-      margin: .2em;
+      flex-wrap: nowrap;
+      flex-direction: row;
+      
+      p {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e9a831;
+        font-family: 'mononoki NF';
+        font-weight: bolder;
+        font-size: 1.3em;
+        @include sizeSquares();
+        margin: 0.2em;
+      }
     }
   }
 }
@@ -81,29 +85,37 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
+  position: relative;
   gap: 10em;
-  
+  bottom: 2.7em;
+    
   .button {
-    color: $white;
-    flex-grow: .1;
-    width: 24em;
-    height: 2.5em;
-    font-family: $font;
-    font-size: 1.123em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 30%;
     border-style: none;
     border-radius: 10px;
     cursor: pointer;
   }
-
+  
+  .button p {
+    color: $white;
+    font-family: 'Rubik';
+    font-weight: normal;
+    font-size: 1.2em;
+  }
+  
   .sort {
-    background: linear-gradient(to right, #005f05, #2dda2d);
+    background: linear-gradient(to right, #00fa00, #007c06);
     &:active {
       opacity: 0.9;
     }
   }
 
   .unsort {
-    background: linear-gradient(to right, #810006, #f12f2f);
+    background: linear-gradient(to right, #a00000, #df0510);
     &:active {
       opacity: 0.9;
     }

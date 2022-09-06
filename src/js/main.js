@@ -1,9 +1,14 @@
-$(document).ready(function () {
-  let defaulArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+let defaulArray = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1];
+let text = $('<p>HELLO THERE</p>')
 
-  for (let i = 0; i < $('.field').length; i++) {
-    $('.field')[i].append(defaulArray[i]);
+// $('.animation-zone').append('<div><p>sadasd</p></div>')
+
+$(document).ready(function () {
+  
+  for (let i = 0; i < defaulArray.length; i++) {
+    let div = $('<div></div>')
+    $('.animation-zone').append(div.append(`<p>${defaulArray[i]}</p>`));
   }
 
-  mergeSort(defaulArray);
+  sort(defaulArray);
 });

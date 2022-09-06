@@ -1,5 +1,5 @@
 body {
-  background-color: #222831;
+  background-color: #222222;
 }
 
 .header {
@@ -43,13 +43,17 @@ body {
   width: 90%;
   height: 80vh;
 }
-.main .container {
+.main section.animation-zone {
+  display: flex;
+  justify-content: center;
+}
+.main section.animation-zone div {
   display: flex;
   justify-content: center;
   flex-wrap: nowrap;
   flex-direction: row;
 }
-.main .container .field {
+.main section.animation-zone div p {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,27 +69,34 @@ body {
 .buttons {
   display: flex;
   justify-content: center;
+  position: relative;
   gap: 10em;
+  bottom: 2.7em;
 }
 .buttons .button {
-  color: #ffffff;
-  flex-grow: 0.1;
-  width: 24em;
-  height: 2.5em;
-  font-family: "Lato";
-  font-size: 1.123em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3em;
+  width: 30%;
   border-style: none;
   border-radius: 10px;
   cursor: pointer;
 }
+.buttons .button p {
+  color: #ffffff;
+  font-family: "Rubik";
+  font-weight: normal;
+  font-size: 1.2em;
+}
 .buttons .sort {
-  background: linear-gradient(to right, #005f05, #2dda2d);
+  background: linear-gradient(to right, #00fa00, #007c06);
 }
 .buttons .sort:active {
   opacity: 0.9;
 }
 .buttons .unsort {
-  background: linear-gradient(to right, #810006, #f12f2f);
+  background: linear-gradient(to right, #a00000, #df0510);
 }
 .buttons .unsort:active {
   opacity: 0.9;

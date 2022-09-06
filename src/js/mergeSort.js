@@ -15,7 +15,7 @@ function merge(left, right) {
   return [...sortedArr, ...left, ...right];
 }
 
-function mergeSort(arr) {
+function sort(arr) {
   // the base case is array length <=1
   if (arr.length <= 1) {
     return arr;
@@ -25,5 +25,5 @@ function mergeSort(arr) {
   const left = arr.splice(0, half); // the first half of the array
   const right = arr;
 
-  return merge(mergeSort(left), mergeSort(right));
+  return merge(sort(left), sort(right));
 }
